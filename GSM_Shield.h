@@ -7,7 +7,7 @@
 #ifndef __GSM_Shield
 #define __GSM_Shield
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "NewSoftSerial.h"
 
 #define GSM_LIB_VERSION 101 // library version X.YY (e.g. 1.00)
