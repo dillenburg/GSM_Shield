@@ -4,8 +4,8 @@
  http://www.creativecommons.org/licenses/by-sa/3.0/
  www.hwkitchen.com
 */  
-#include "WProgram.h"
-#include "NewSoftSerial.h"
+#include "Arduino.h"
+#include "SoftwareSerial.h"
 #include "GSM_Shield.h"
 
 extern "C" {
