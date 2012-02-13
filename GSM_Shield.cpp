@@ -13,7 +13,7 @@ extern "C" {
 }
 
 
-NewSoftSerial mySerial(4, 5);  //rx, tx
+SoftwareSerial mySerial(4, 5);  //rx, tx
 
 
 
@@ -1392,10 +1392,10 @@ char GSM::SendSMS(char *number_str, char *message_str)
 	  
 #ifdef DEBUG_SMS_ENABLED
       // SMS will not be sent = we will not pay => good for debugging
-      mySerial.print(0x1b, BYTE);
+      mySerial.write(0x1b);
       if (RX_FINISHED_STR_RECV == WaitResp(7000, 50, "OK")) {
 #else 
-      mySerial.print(0x1a, BYTE);
+      mySerial.write(0x1a);
 	  //mySerial.flush(); // erase rx circular buffer
       if (RX_FINISHED_STR_RECV == WaitResp(7000, 5000, "+CMGS")) {
 #endif
